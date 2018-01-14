@@ -6,15 +6,13 @@ public class Board {
     public Board (){//this.board();
     }
     // public static void main(String[] args) {
-    public static String[][] board() {
+    public static int[][] board() {
         int height, width;
-        String board_square = "e";
-        String[][] ban = new String[14][14];
+        int board_square = 0;
+        int[][] ban = new int[14][14];
         for (height = 0; height < 14; height++) {
-            for (width = 0; width < 14; width++) {
+            for (width = 0; width < 14; width++)
                 ban[height][width] = board_square;
-
-            }
         }
         //System.out.print(Arrays.deepToString(ban));
         return ban;
@@ -23,7 +21,7 @@ public class Board {
     //change_num(ban);
     //ban[0][4] = "";
     //System.out.print(Arrays.deepToString(ban));
-    public static void boarddisplay(String ban[][]) {
+    public static void boarddisplay(int ban[][]) {
         int y = -1;
         int x = -1;
 
