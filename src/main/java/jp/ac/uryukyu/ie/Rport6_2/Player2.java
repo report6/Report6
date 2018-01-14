@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Player2 extends Player{
 
         public Player2 (boolean position,int count,String name){
-            super(position,count,name);
+            super(name);
         }
 
         public void main(){
