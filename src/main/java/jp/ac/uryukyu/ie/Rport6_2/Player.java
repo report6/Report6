@@ -4,59 +4,49 @@ import java.util.Scanner;
 
 public class Player {
 
-    private boolean position;
+    private boolean position,lose;
     private int count;
     private String name;
     Board ban = new Board();
 
-    public Player(String name) {
+    public Player(String name) {}
+
+    public void put(String name) {
         this.name = name;
         System.out.printf("%sの番です", name);
         System.out.printf("置く場所を決めてください");
         Scanner scan = new Scanner(System.in);
         int num = scan.nextInt();
         int num2 = scan.nextInt();
-        ban.board()[num][num2]="●";
+        if(!(ban.board()[num][num2] =="e")){
+            System.out.print("ここには石を置けません");
+        }
 
     }
 
-/*
+
     public boolean isEmpty() {
         //指定した場所が空かどうか調べる
-
+        return position;
     }
 
-    public boolean getEmpty() {
-
+    public void putting(){
+        //置いた石を覚える
     }
 
-    public boolean isMine() {
-        //指定した場所に自分の石を置いてあるか調べる
-    }
-
-    public boolean getMine() {
-
-    }
-
-    public boolean isOpponent() {
-        //指定した場所に相手の石が置いてあるか調べる
-    }
-
-    public boolean getOpponent() {
-
+    public String getName(){
+        return name;
     }
 
 
-    public void put() {
-        //指定した場所に石を置く
-    }
-    */
-
-    public void win() {
-        System.out.printf("%sの勝利です", name);
+    public void setName(String name){
+        this.name=name;
     }
 
-    public void lose() { System.out.printf("%sの負けです", name); }
+    public boolean isLose(){
+        return lose;
+    }
+    
 }
 
 
