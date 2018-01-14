@@ -3,7 +3,7 @@ package jp.ac.uryukyu.ie.Rport6_2;
 import java.util.Arrays;
 
 public class Board {
-    
+
     public static void main(String[] args) {
         int height, width;
         int board_square = 0;
