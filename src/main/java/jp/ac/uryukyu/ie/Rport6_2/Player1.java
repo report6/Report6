@@ -8,13 +8,18 @@ public class Player1 extends Player {
         super(name);
     }
 
-    public void put(String name){
-        System.out.printf("%sの番です", getName());
-        System.out.printf("置く場所を決めてください");
+
+    public void put(){
+        System.out.printf("%sの番です\n", getName());
+        System.out.printf("置く場所を決めてください\n");
         Scanner scan = new Scanner(System.in);
         int num = scan.nextInt();
         int num2 = scan.nextInt();
         ban.board()[num][num2]="●";
+        if(!(ban.board()[num][num2] =="e")){
+            System.out.print("ここには石を置けません");
+        }
+
     }
 
     public void juge(Player opponent){
