@@ -16,7 +16,7 @@ public class Player {
         Scanner scan = new Scanner(System.in);
         int num = scan.nextInt();
         int num2 = scan.nextInt();
-        ban.board()[num][num2]=;
+        ban.board()[num][num2]="●";
 
     }
 
