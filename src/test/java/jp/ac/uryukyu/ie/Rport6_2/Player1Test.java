@@ -15,7 +15,7 @@ public class Player1Test {
         Scanner scan = new Scanner(System.in);
         int num = scan.nextInt();
         int num2 = scan.nextInt();
-        ban.w_ban(num,num2);
+        ban.w_ban(int num,int num2);
         ban.boarddisplay();
     }
 
