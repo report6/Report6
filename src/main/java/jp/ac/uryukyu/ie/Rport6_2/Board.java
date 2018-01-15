@@ -23,10 +23,16 @@ public class Board {
         return ban;
     }
 
+    public void w1_ban(int x, int y) {
+        this.board()[x][y] = "●";
+    }
+
+
+
     //change_num(ban);
     //ban[0][4] = "";
     //System.out.print(Arrays.deepToString(ban));
-    public static void boarddisplay(String ban[][]) {
+    public  void boarddisplay(String ban[][]) {
         int y = -1;
         int x = -1;
         String abc[] = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N"};
@@ -48,19 +54,22 @@ public class Board {
                         }
                     }
                 }
-                    y += 1;
-                    if (y == 14) {
-                        y = 0;
-                    }
-                    //System.out.print(x);
-                    if (j < 13) {
-                        System.out.print(String.format("%2s",ban[x][y]));
-                    } else {
-                        System.out.print(String.format("%2s",ban[x][y]));
-                        System.out.println(String.format("%2s",num[i]));
+                y += 1;
+                if (y == 14) {
+                    y = 0;
+                }
+                //System.out.print(x);
+                if (j < 13) {
+                    System.out.print(String.format("%2s",ban[x][y]));
+                } else {
+                    System.out.print(String.format("%2s",ban[x][y]));
+                    System.out.println(String.format("%2s",num[i]));
 
-                    }
                 }
             }
         }
     }
+
+
+    
+}
