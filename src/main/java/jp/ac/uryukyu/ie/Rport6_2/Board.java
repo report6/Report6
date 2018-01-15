@@ -5,10 +5,14 @@ import java.util.Stack;
 
 
 public class Board {
+
+    String ban[][];
+
     public Board (){//this.board();
+        board();
     }
     // public static void main(String[] args) {
-    public static String[][] board() {
+    public void board() {
         int height, width;
         String board_square = "e";
         String[][] ban = new String[14][14];
@@ -20,11 +24,11 @@ public class Board {
         }
 
         //System.out.print(Arrays.deepToString(ban));
-        return ban;
+
     }
 
     public void w1_ban(int x, int y) {
-        this.board()[x][y] = "●";
+        ban[x][y] = "●";
     }
 
 
@@ -32,7 +36,7 @@ public class Board {
     //change_num(ban);
     //ban[0][4] = "";
     //System.out.print(Arrays.deepToString(ban));
-    public  void boarddisplay(String ban[][]) {
+    public  void boarddisplay() {
         int y = -1;
         int x = -1;
         String abc[] = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N"};
@@ -71,5 +75,5 @@ public class Board {
     }
 
 
-    
+
 }

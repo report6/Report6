@@ -6,14 +6,16 @@ import java.util.InputMismatchException;
 
 public class Player1 extends Player {
 
+
     public Player1(String name) {
         super(name);
     }
 
-    public void put(String name){
+    public void put(String name,Board ban){
+        //ban.boardinit();
         int x = 0;
         int y = 0;
-        System.out.printf("%sの番です\n", name);
+        System.out.printf("%sの番です\n", getName());
         System.out.printf("置く場所を決めてください\n");
         Scanner scan = new Scanner(System.in);
         try {
@@ -21,13 +23,16 @@ public class Player1 extends Player {
             x = scan.nextInt();
             System.out.println("縦列");
             y = scan.nextInt();
+            ban.w1_ban(x,y);
+            //ban.boardinit();
+            ban.boarddisplay();
 
-            ban.board()[x][y]="●";
+           /* ban.board()[x][y]="●";/*
             if(!(ban.board()[x][y] =="e")) {
                 System.out.print("ここには石を置けません");
-            }
+            }*/
         }catch (NoSuchElementException e/*InputMismatchException e*/){
-                System.out.println("整数を入力してください。");
+            System.out.println("整数を入力してください。");
         }
     }
 /*
@@ -36,7 +41,6 @@ public class Player1 extends Player {
             System.out.printf("%dの勝利です",opponent.getName());
         }
     }
-
         */
 
 
