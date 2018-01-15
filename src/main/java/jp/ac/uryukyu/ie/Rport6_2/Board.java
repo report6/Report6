@@ -48,19 +48,19 @@ public class Board {
                         }
                     }
                 }
-                x += 1;
-                if (x == 14) {
-                    x = 0;
-                }
-                //System.out.print(x);
-                if (j < 13) {
-                    System.out.print(String.format("%2s",ban[y][x]));
-                } else {
-                    System.out.print(String.format("%2s",ban[y][x]));
-                    System.out.println(String.format("%2s",num[i]));
+                    x += 1;
+                    if (x == 14) {
+                        x = 0;
+                    }
+                    //System.out.print(x);
+                    if (j < 13) {
+                        System.out.print(String.format("%2s",ban[y][x]));
+                    } else {
+                        System.out.print(String.format("%2s",ban[y][x]));
+                        System.out.println(String.format("%2s",num[i]));
 
+                    }
                 }
             }
         }
     }
-}
