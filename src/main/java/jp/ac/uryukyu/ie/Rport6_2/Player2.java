@@ -1,14 +1,12 @@
 package jp.ac.uryukyu.ie.Rport6_2;
 
 import java.util.Scanner;
-
-public class Player2 extends Player {
-
+public class Player2 extends Player{
     public Player2(String name) {
         super(name);
     }
 
-    public void put() {
+    public void put(String name) {
         System.out.printf("%sの番です\n", getName());
         System.out.printf("置く場所を決めてください\n");
         Scanner scan = new Scanner(System.in);
@@ -29,5 +27,6 @@ public class Player2 extends Player {
     }
 
 }
+
 
 

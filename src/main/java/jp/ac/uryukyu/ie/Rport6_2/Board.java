@@ -33,9 +33,9 @@ public class Board {
         String num[] = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14"};
         for (int i = 0; i < 14; i++) {
 
-            y += 1;
-            if (y == 14) {
-                y = 13;
+            x += 1;
+            if (x == 14) {
+                x = 13;
             }
             //System.out.print(y);
             for (int j = 0; j < 14; j++) {
@@ -48,15 +48,15 @@ public class Board {
                         }
                     }
                 }
-                    x += 1;
-                    if (x == 14) {
-                        x = 0;
+                    y += 1;
+                    if (y == 14) {
+                        y = 0;
                     }
                     //System.out.print(x);
                     if (j < 13) {
-                        System.out.print(String.format("%2s",ban[y][x]));
+                        System.out.print(String.format("%2s",ban[x][y]));
                     } else {
-                        System.out.print(String.format("%2s",ban[y][x]));
+                        System.out.print(String.format("%2s",ban[x][y]));
                         System.out.println(String.format("%2s",num[i]));
 
                     }
