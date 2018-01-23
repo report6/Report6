@@ -15,7 +15,7 @@ public class Board {
     public void board() {
         int height, width;
         String board_square = "e";
-        String[][] ban = new String[14][14];
+        ban = new String[14][14];
         for (height = 0; height < 14; height++) {
             for (width = 0; width < 14; width++) {
                 ban[height][width] = board_square;
@@ -27,11 +27,29 @@ public class Board {
 
     }
 
+    /**
+     * @param x
+     * @param y
+     */
+    //Player1 player1 = new Player1();
+
     public void w1_ban(int x, int y) {
-        ban[x][y] = "●";
+
+            ban[x][y] = "●";
+            //ban[x][y] = "◯";
+
     }
 
+    public void w2_ban(int x, int y) {
 
+        //ban[x][y] = "●";
+        ban[x][y] = "◯";
+
+    }
+
+    public void w_ban(){
+
+    }
 
     //change_num(ban);
     //ban[0][4] = "";
