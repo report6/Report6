@@ -15,17 +15,23 @@ public static void main(String[] args){
         //scan.close();
         //Order order = new Order("")
         Board ban = new Board();
-        ban.boarddisplay(ban.board());
+        ban.boarddisplay();
 
         int turn=0;
+
         while (true){//!player1.isLose() && player2.isLose()==false){
                 turn++;
                 System.out.printf("%dターン目です\n",turn);
-                player1.put(name1);
+                player1.put(name1,turn);
                 //ban.boarddisplay(ban.board());
-                //player2.put(name2);
-                ban.boarddisplay(ban.board());
+                turn++;
+                System.out.printf("%dターン目です\n",turn);
+                player2.put(name2);
+                //ban.boarddisplay(ban.board());
         }
         //System.out.println("試合終了");
+
     }
+
+
 }

@@ -11,10 +11,12 @@ public class Player1 extends Player {
         super(name);
     }
 
-    public void put(String name,Board ban){
+
+    public void put(String name,int count){
         //ban.boardinit();
         int x = 0;
         int y = 0;
+
         System.out.printf("%sの番です\n", getName());
         System.out.printf("置く場所を決めてください\n");
         Scanner scan = new Scanner(System.in);

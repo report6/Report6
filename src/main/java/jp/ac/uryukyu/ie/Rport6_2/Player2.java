@@ -8,6 +8,7 @@ public class Player2 extends Player{
     }
 
     public void put(String name) {
+        int count = 2;
         int x = 0;
         int y = 0;
         System.out.printf("%sの番です\n", getName());
@@ -19,7 +20,7 @@ public class Player2 extends Player{
             System.out.println("縦列");
             y = scan.nextInt();
 
-            ban.w1_ban(x,y);
+            ban.w2_ban(x,y);
             //ban.boardinit();
             ban.boarddisplay();
 

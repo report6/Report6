@@ -9,7 +9,10 @@ public class Player {
     private String name;
     Board ban = new Board();
 
-    public Player(String name) {}
+    public Player(String name) {
+        ban.board();
+        this.name = name;
+    }
 
     public void put(String name) {
         this.name = name;
@@ -18,9 +21,6 @@ public class Player {
         Scanner scan = new Scanner(System.in);
         int num = scan.nextInt();
         int num2 = scan.nextInt();
-        if(!(ban.board()[num][num2] =="e")){
-            System.out.print("ここには石を置けません");
-        }
 
     }
 
