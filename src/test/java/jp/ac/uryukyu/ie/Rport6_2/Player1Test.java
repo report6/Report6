@@ -1,6 +1,6 @@
 package jp.ac.uryukyu.ie.Rport6_2;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import java.util.Scanner;
 
@@ -10,12 +10,12 @@ public class Player1Test {
 
     @Test
 
-    public void put(String name) {
+    public void put() {
         Board ban = new Board();
         Scanner scan = new Scanner(System.in);
         int num = scan.nextInt();
         int num2 = scan.nextInt();
-        ban.w_ban(int num,int num2);
+        ban.w1_ban(num,num2);
         ban.boarddisplay();
     }
 
