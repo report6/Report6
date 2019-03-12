@@ -2,11 +2,13 @@ package jp.ac.uryukyu.ie.Rport6_2;
 
 import java.util.Arrays;
 import java.util.Stack;
+import java.util.Scanner;
 
 
 public class Board {
-
+    boolean position;
     String ban[][];
+    //Player player = new Player();
 
     public Board (){//this.board();
         board();
@@ -14,7 +16,7 @@ public class Board {
     // public static void main(String[] args) {
     public void board() {
         int height, width;
-        String board_square = "e";
+        String board_square = "+";
         ban = new String[14][14];
         for (height = 0; height < 14; height++) {
             for (width = 0; width < 14; width++) {
@@ -22,9 +24,6 @@ public class Board {
 
             }
         }
-
-        //System.out.print(Arrays.deepToString(ban));
-
     }
 
     /**
@@ -33,23 +32,29 @@ public class Board {
      */
     //Player1 player1 = new Player1();
 
-    public void w1_ban(int x, int y) {
-
-            ban[x][y] = "●";
-            //ban[x][y] = "◯";
-
+    public boolean w1_ban(int x, int y) {
+      if(ban[x][y] == "+"){
+        ban[x][y] = "●";
+        position = false;
+      }else{
+        System.out.println("ここはすでに打たられています");
+        position = true;
+      }
+      return position;
     }
 
-    public void w2_ban(int x, int y) {
-
-        //ban[x][y] = "●";
+    public boolean w2_ban(int x, int y) {
+      if(ban[x][y] == "+"){
         ban[x][y] = "◯";
-
+        position = false;
+      }else{
+        System.out.println("ここはすでに打たられています");
+        position = true;
+      }
+      return position;
     }
 
-    public void w_ban(){
-
-    }
+    public void w_ban(){}
 
     //change_num(ban);
     //ban[0][4] = "";
@@ -70,9 +75,9 @@ public class Board {
                 if (i == 0 && j == 0) {
                     for (int t = 0; t < 14; t++) {
                         if (t < 13) {
-                            System.out.print(String.format("%2s",num[t]));
+                            System.out.print(String.format("%3s",num[t]));
                         } else {
-                            System.out.println(String.format("%2s",num[t]));
+                            System.out.println(String.format("%3s",num[t]));
                         }
                     }
                 }
@@ -82,16 +87,15 @@ public class Board {
                 }
                 //System.out.print(x);
                 if (j < 13) {
-                    System.out.print(String.format("%2s",ban[x][y]));
+                    System.out.print(String.format("%3s",ban[x][y]));
                 } else {
-                    System.out.print(String.format("%2s",ban[x][y]));
-                    System.out.println(String.format("%2s",num[i]));
+                    System.out.print(String.format("%3s",ban[x][y]));
+                    System.out.println(String.format("%3s",num[i]));
 
                 }
             }
         }
     }
-
 
 
 }

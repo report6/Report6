@@ -7,40 +7,35 @@ public class Player2 extends Player{
         super(name);
     }
 
-    public void put(String name) {
-        int count = 2;
+    public void put(String name,int count){
+        //ban.boardinit();
         int x = 0;
         int y = 0;
-        System.out.printf("%sの番です\n", getName());
-        System.out.printf("置く場所を決めてください\n");
+
+        System.out.print(getName()+"の番です\n");
+        System.out.print("置く場所を決めてください\n");
         Scanner scan = new Scanner(System.in);
         try {
             System.out.println("横列");
             x = scan.nextInt();
+            x -= 1;
+            if(x > 14){
+              System.out.println("盤の範囲を超えています");
+              put(name,count);
+            }
+
             System.out.println("縦列");
             y = scan.nextInt();
+            y -= 1;
+            if(y > 14){
+              System.out.println("盤の範囲を超えています");
+              put(name,count);
+            }
 
-            ban.w2_ban(x,y);
-            //ban.boardinit();
-            ban.boarddisplay();
-
-           /* ban.board()[x][y]="◯";/*
-            if(!(ban.board()[x][y] =="e")) {
-                System.out.print("ここには石を置けません");
-            }*/
         }catch (NoSuchElementException e/*InputMismatchException e*/){
             System.out.println("整数を入力してください。");
+            put(name,count);
         }
-
-
+        return x,y;
+      }
     }
-
-    public void juge(Player opponent){
-        if(isLose()==true){
-            System.out.printf("%dの勝利です",opponent.getName());
-        }
-    }
-
-}
-
-
