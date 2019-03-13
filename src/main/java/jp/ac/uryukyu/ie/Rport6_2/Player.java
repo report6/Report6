@@ -18,7 +18,6 @@ public class Player {
       System.out.print("置く場所を決めてください\n");
       Scanner scan = new Scanner(System.in);
       try {
-
           System.out.println("横列");
           x_position = scan.nextInt();
           x_position -= 1;

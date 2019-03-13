@@ -5,15 +5,10 @@ public class Order {
     Board board = new Board();
 
     public order(){
-
     }
 
-    public void win(){
-        //勝利判定を行う
-    }
-
-    public boolean putting(int x, int y){
-      if(board.)
+    public boolean putting(){
+      if()
     }
 
 }

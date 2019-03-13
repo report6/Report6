@@ -5,7 +5,7 @@ import java.util.Scanner;
 import java.util.InputMismatchException;
 
 public class Players extends Player {
-  
+
     public Players(String name) {
         super(name);
         Board board = new Board();
@@ -22,7 +22,7 @@ public class Players extends Player {
             System.out.println("横列");
             x_position = scan.nextInt();
             x_position -= 1;
-            if(x_position > 14 || x_position < 0){
+            if(x_position > 14 || x_position <= 0){
               System.out.println("盤の範囲を超えています");
               put();
             }
@@ -30,7 +30,7 @@ public class Players extends Player {
             System.out.println("縦列");
             y_position = scan.nextInt();
             y_position -= 1;
-            if(y_position > 14 || y_position < 0){
+            if(y_position > 14 || y_position <= 0){
               System.out.println("盤の範囲を超えています");
               put();
             }
@@ -49,5 +49,8 @@ public class Players extends Player {
     }
         */
 
+    public void win(){}
+
+    public void lose(){} 
 
 }

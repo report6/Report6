@@ -11,22 +11,22 @@ public static void main(String[] args){
 
         System.out.println("あなたの名前を入力してください");
         String name1 = scan.next();
-        Players player1 = new Players(name1);
+        Player player1 = new Player(name1);
 
         System.out.println("あなたの名前を入力してください");
         String name2 = scan.next();
-        Players player2 = new Players(name2);
+        Player player2 = new Player(name2);
 
 
         ban.boarddisplay();
         int turn=0;
 
-        while (true){//!player1.isLose() && player2.isLose()==false){
+        while (ban.ban_check_lenght() && ban.ban_check_widht()){//!player1.isLose() && player2.isLose()==false){
 
                 turn++;
                 System.out.print(turn+"ターン目です\n");
                 player1.put();
-                while(ban.w1_ban(player1.getXposition(),player1.getYposition())){
+                while(ban.w_ban(player1.getXposition(),player1.getYposition(),turn)){
                   player1.put();
                 }
                 ban.boarddisplay();
@@ -34,12 +34,12 @@ public static void main(String[] args){
                 turn++;
                 System.out.print(turn+"ターン目です\n");
                 player2.put();
-                while(ban.w2_ban(player2.getXposition(),player2.getYposition())){
+                while(ban.w_ban(player2.getXposition(),player2.getYposition(),turn)){
                   player2.put();
                 }
                 ban.boarddisplay();
         }
-        //System.out.println("試合終了");
+        System.out.println("試合終了");
 
     }
 
